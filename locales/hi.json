@@ -1,0 +1,187 @@
+{
+  "start": {
+    "welcome": "Hey {name}! 👋\n\nMain hoon <b>Miss Cherry 🍒</b> Aapka smart Group Moderator Bot!\n\n/help tap karo saari features dekhne ke liye! ✨",
+    "group_welcome": "Hey {name}! 👋\nMain hoon <b>Miss Cherry 🍒</b> Aapka smart Group Moderator Bot!\nFeatures dekhne ke liye /help use karo! ✨"
+  },
+  "general": {
+    "not_admin": "❌ Aap admin nahi hain!",
+    "not_sudo": "❌ Sirf sudo users yeh use kar sakte hain!",
+    "not_owner": "❌ Sirf owner yeh use kar sakta hai!",
+    "no_user": "❌ Koi user specify karo (reply / @username / user_id).",
+    "user_not_found": "❌ User nahi mila.",
+    "cant_action_admin": "❌ Admin par yeh action nahi kar sakte!",
+    "only_creator": "❌ Sirf group creator yeh use kar sakta hai!",
+    "close": "✖️ Band kar diya.",
+    "enabled": "सक्षम",
+    "disabled": "अक्षम"
+  },
+  "admin": {
+    "promoted": "✅ {name} ko <b>promote</b> kar diya gaya!",
+    "demoted": "✅ {name} ko <b>demote</b> kar diya gaya!",
+    "cache_updated": "✅ एडमिन कैश रीफ्रेश हो गया! ({count} एडमिन मिले)",
+    "adminlist_title": "👮 <b>Is chat ke Admins:</b>\n\n{list}",
+    "anon_updated": "⚙️ अनाम एडमिन मोड: <b>{state}</b>",
+    "error_updated": "⚙️ एडमिन-ओनली एरर मैसेज: <b>{state}</b>"
+  },
+  "bans": {
+    "banned": "🔨 {name} ko <b>ban</b> kar diya gaya!",
+    "unbanned": "✅ {name} ko <b>unban</b> kar diya gaya!",
+    "muted": "🔇 {name} ko <b>mute</b> kar diya gaya!",
+    "unmuted": "✅ {name} ko <b>unmute</b> kar diya gaya!",
+    "kicked": "👢 {name} ko <b>kick</b> kar diya gaya!",
+    "tban": "⏱ {name} ko <code>{time}</code> ke liye <b>temp-ban</b> kar diya gaya.",
+    "tmute": "⏱ {name} ko <code>{time}</code> ke liye <b>temp-mute</b> kar diya gaya.",
+    "reason": "\n<b>Wajah:</b> {reason}",
+    "fail": "❌ Failed: {error}"
+  },
+  "antiflood": {
+    "disabled": "✅ Antiflood <b>band</b> kar diya gaya.",
+    "enabled": "✅ Antiflood <b>{limit}</b> messages par set kar diya gaya.",
+    "status_off": "❌ Antiflood <b>band</b> hai.",
+    "status_on": "✅ Antiflood <b>chalu</b> hai.\n• <b>Limit:</b> {limit} messages\n• <b>Action:</b> {mode}\n• <b>Flood msgs delete:</b> {clear}",
+    "mode_set": "✅ Flood action <b>{mode}</b> set kar diya gaya.",
+    "timer_set": "✅ Timed antiflood: <b>{count}</b> msgs <b>{duration}</b> mein.",
+    "timer_off": "✅ Timed antiflood <b>band</b> kar diya gaya.",
+    "clear_set": "✅ Flood messages delete: <b>{value}</b>.",
+    "triggered_ban": "🚫 {name} ko flood karne par <b>ban</b> kar diya gaya!",
+    "triggered_mute": "🔇 {name} ko flood karne par <b>mute</b> kar diya gaya!",
+    "triggered_kick": "👢 {name} ko flood karne par <b>kick</b> kar diya gaya!",
+    "triggered_tban": "⏱ {name} ko flood karne par <b>temp-ban</b> kar diya gaya!",
+    "triggered_tmute": "⏱ {name} ko flood karne par <b>temp-mute</b> kar diya gaya!"
+  },
+  "antiraid": {
+    "enabled": "🛡 AntiRaid <b>{duration}</b> ke liye <b>chalu</b> kar diya gaya!\nSab naye members temp-ban honge.",
+    "disabled": "✅ AntiRaid <b>band</b> kar diya gaya.",
+    "raidtime_set": "✅ Raid duration <b>{time}</b> set kar diya gaya.",
+    "actiontime_set": "✅ Raider ban duration <b>{time}</b> set kar diya gaya.",
+    "auto_set": "✅ Auto AntiRaid: <b>{joins}</b> join/minute par chalu hoga.",
+    "auto_off": "✅ Auto AntiRaid <b>band</b> kar diya gaya.",
+    "auto_triggered": "🚨 <b>Raid pakda gaya! AntiRaid automatic chalu ho gaya!</b>",
+    "current_raidtime": "⏱ Abhi ki raid duration: <b>{time}</b>",
+    "current_actiontime": "⏱ Raiders ka ban duration: <b>{time}</b>"
+  },
+  "approval": {
+    "approved_yes": "✅ {name} is chat mein <b>approved</b> hai.",
+    "approved_no": "❌ {name} is chat mein <b>approved nahi</b> hai.",
+    "approve_done": "✅ {name} ko <b>approve</b> kar diya gaya!\nLocks, blocklists aur antiflood unpar lagoo nahi honge.",
+    "unapprove_done": "✅ {name} ko <b>unapprove</b> kar diya gaya. Restrictions phir se lagoo honge.",
+    "approved_list": "✅ <b>Approved users:</b>\n\n{list}",
+    "approved_none": "📋 Is chat mein koi approved user nahi hai.",
+    "unapprove_all_done": "✅ Sab approved users ko <b>unapprove</b> kar diya gaya."
+  },
+  "blocklist": {
+    "added": "✅ <code>{trigger}</code> blocklist mein add kar diya gaya.",
+    "removed": "✅ <code>{trigger}</code> blocklist se remove kar diya gaya.",
+    "cleared": "✅ Sab blocklist triggers <b>saaf</b> kar diye gaye!",
+    "list_title": "🚫 <b>Blocklist triggers:</b>\n\n{list}",
+    "list_empty": "📋 Is chat mein koi blocklist trigger nahi hai.",
+    "mode_set": "✅ Blocklist mode <b>{mode}</b> set kar diya gaya.",
+    "delete_set": "✅ Blocklist delete: <b>{value}</b>.",
+    "reason_set": "✅ Default blocklist reason set kar diya gaya: <code>{reason}</code>",
+    "reason_reset": "✅ Default blocklist reason <b>reset</b> kar diya gaya."
+  },
+  "filters": {
+    "added": "✅ Filter <code>{trigger}</code> add kar diya gaya!",
+    "removed": "✅ Filter <code>{trigger}</code> remove kar diya gaya.",
+    "cleared": "✅ Sab filters <b>saaf</b> kar diye gaye!",
+    "list_title": "🔍 <b>Active Filters:</b>\n\n{list}",
+    "list_empty": "📋 Is chat mein koi filter nahi hai."
+  },
+  "greetings": {
+    "welcome_on": "✅ Welcome messages: <b>Chalu</b>.",
+    "welcome_off": "✅ Welcome messages: <b>Band</b>.",
+    "goodbye_on": "✅ Goodbye messages: <b>Chalu</b>.",
+    "goodbye_off": "✅ Goodbye messages: <b>Band</b>.",
+    "welcome_set": "✅ Welcome message update ho gaya!",
+    "welcome_reset": "✅ Welcome message default par reset ho gaya.",
+    "goodbye_set": "✅ Goodbye message update ho gaya!",
+    "goodbye_reset": "✅ Goodbye message default par reset ho gaya.",
+    "clean_on": "✅ Clean welcome: <b>Chalu</b>.",
+    "clean_off": "✅ Clean welcome: <b>Band</b>.",
+    "default_welcome": "👋 {mention} ka <b>{chatname}</b> mein swagat hai!",
+    "default_goodbye": "👋 {mention} ne <b>{chatname}</b> chod diya. Alvida!"
+  },
+  "language": {
+    "current": "🌐 Abhi ki bhasha: <b>{lang}</b>\n\nBhasha chuniye:",
+    "set": "✅ Bhasha <b>{lang}</b> set kar di gayi!",
+    "invalid": "❌ Galat bhasha. Buttons se chuniye."
+  },
+  "pin": {
+    "pinned": "📌 Message <b>pin</b> kar diya gaya!",
+    "unpinned": "✅ Message <b>unpin</b> kar diya gaya!",
+    "unpinned_all": "✅ Sab messages <b>unpin</b> kar diye gaye!",
+    "no_pinned": "📌 Is chat mein koi pinned message nahi hai.",
+    "antichannelpin_on": "✅ Anti-channel-pin: <b>Chalu</b>.",
+    "antichannelpin_off": "✅ Anti-channel-pin: <b>Band</b>.",
+    "cleanlinked_on": "✅ Linked channel messages delete: <b>Chalu</b>.",
+    "cleanlinked_off": "✅ Linked channel messages delete: <b>Band</b>.",
+    "no_reply": "❌ Pin karne ke liye kisi message ko reply karo."
+  },
+  "purge": {
+    "done": "✅ <b>{count}</b> messages delete kar diye gaye.",
+    "no_reply": "❌ Purge shuru karne ke liye kisi message ko reply karo.",
+    "purgefrom_set": "✅ Purge start mark ho gaya! Ab <code>/purgeto</code> use karo.",
+    "purgeto_no_from": "❌ Pehle <code>/purgefrom</code> use karo.",
+    "fail": "❌ Failed: {error}"
+  },
+  "report": {
+    "not_reply": "❌ Report karne ke liye kisi message ko reply karo.",
+    "cant_report_admin": "❌ Admin ko report nahi kar sakte.",
+    "reported": "🚨 <b>Message admins ko report kar diya gaya!</b>\n\n<b>Report kiya:</b> {user}\n<b>Admins:</b> {admins}",
+    "disabled": "ℹ️ Is chat mein reports band hain.",
+    "admin_cant_report": "ℹ️ Admins report command use nahi kar sakte.",
+    "reports_on": "✅ User reports: <b>Chalu</b>.",
+    "reports_off": "✅ User reports: <b>Band</b>."
+  },
+  "rules": {
+    "none": "📜 Is chat ke liye abhi koi rules set nahi hain.",
+    "title": "📜 <b>{chatname} ke Rules:</b>\n\n{rules}",
+    "set": "✅ Rules update ho gaye!",
+    "reset": "✅ Rules <b>reset</b> ho gaye.",
+    "private_on": "✅ Private rules: <b>Chalu</b>.",
+    "private_off": "✅ Private rules: <b>Band</b>.",
+    "sent_private": "📩 Rules aapko private mein bhej diye gaye!"
+  },
+  "warning": {
+    "warned": "⚠️ {name} ko <b>warning</b> mili! ({count}/{limit})\n<b>Wajah:</b> {reason}",
+    "limit_reached": "🚨 Warning limit aa gayi! Action: <b>{action}</b>",
+    "no_warns": "✅ {name} ko koi warning nahi hai.",
+    "warns_list": "⚠️ <b>{name} ki warnings</b> ({count}/{limit}):\n\n{list}",
+    "removed": "✅ {name} ki aakhri warning hata di gayi.",
+    "reset": "✅ {name} ki saari warnings <b>reset</b> ho gayi.",
+    "reset_all": "✅ Is chat ki saari warnings <b>saaf</b> kar di gayi!",
+    "settings": "⚙️ <b>Warning Settings:</b>\n\n• <b>Limit:</b> {limit}\n• <b>Action:</b> {mode}\n• <b>Expiry:</b> {time}",
+    "mode_set": "✅ Warn mode <b>{mode}</b> set kar diya gaya.",
+    "limit_set": "✅ Warn limit <b>{limit}</b> set kar diya gaya.",
+    "time_set": "✅ Warnings <b>{time}</b> baad expire hongi.",
+    "time_off": "✅ Warnings <b>kabhi expire nahi</b> hongi.",
+    "cant_warn_admin": "❌ Admin ko warn nahi kar sakte!"
+  },
+  "sudo": {
+    "added": "✅ {name} ko <b>sudo user</b> bana diya gaya!",
+    "removed": "✅ {name} ko sudo users se hata diya gaya.",
+    "already_owner": "ℹ️ Yeh user pehle se owner hai!",
+    "list_title": "🔑 <b>Sudo Users:</b>\n\n{list}",
+    "list_empty": "📋 Abhi tak koi sudo user add nahi kiya gaya."
+  },
+  "getlink": {
+    "no_chats": "📋 Database mein koi chat nahi mili.",
+    "no_permission": "Permission nahi",
+    "fail": "❌ Koi bhi chat link fetch nahi ho saka."
+  },
+  "chatbot": {
+    "on": "🤖 Chatbot <b>ON ✅</b> kar diya gaya!",
+    "off": "🤖 Chatbot <b>OFF ❌</b> kar diya gaya!",
+    "status_on": "🤖 Chatbot abhi: <b>ON ✅</b> hai",
+    "status_off": "🤖 Chatbot abhi: <b>OFF ❌</b> hai",
+    "error": "Arrey yaar, kuch gadbad ho gayi 😅"
+  },
+  "broadcast": {
+    "no_reply": "❌ Jis message ko broadcast karna hai usse <b>reply</b> karo.",
+    "started": "📡 Broadcasting ho raha hai... Thoda wait karo.",
+    "done": "✅ <b>Broadcast Complete!</b>\n\n• <b>Total:</b> {total}\n• <b>Success:</b> {success} ✅\n• <b>Failed:</b> {failed} ❌"
+  },
+  "info": {
+    "title": "ℹ️ <b>Miss Cherry Info</b>\n\n❤️ ke saath banaya <b>AlfaBots</b> ne"
+  }
+}
