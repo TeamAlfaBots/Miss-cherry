@@ -1,0 +1,6 @@
+kurigram>=2.2.26
+TgCrypto
+motor
+aiohttp
+dnspython
+python-dotenv
