@@ -46,7 +46,7 @@ class Config:
     SUPPORT_LINK:       str = os.getenv("SUPPORT_LINK", "https://t.me/alfabots_support")
     UPDATE_LINK:        str = os.getenv("UPDATE_LINK", "https://t.me/Alfabots_update")
     SOURCE_LINK:        str = os.getenv("SOURCE_LINK", "https://t.me/uffsexyboi")
-    DOCS_URL:           str = os.getenv("DOCS_URL", "https://precious-sunflower-cfe571.netlify.app/)
+    DOCS_URL:           str = os.getenv("DOCS_URL", "https://precious-sunflower-cfe571.netlify.app/")
     OWNER_USERNAME:     str = os.getenv("OWNER_USERNAME", "@ll_cherruu")
     DEVELOPER_USERNAME: str = os.getenv("DEVELOPER_USERNAME", "@uffsexyboi")
 
