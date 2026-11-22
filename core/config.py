@@ -33,7 +33,7 @@ class Config:
 
     # ── Bot Info ─────────────────────────────
     BOT_NAME: str  = os.getenv("BOT_NAME", "Miss Cherry 🍒")
-    START_IMG: str = os.getenv("START_IMG", "")
+    START_IMG: str = os.getenv("START_IMG", "https://files.catbox.moe/8ft1s9.png")
 
     # ── Rich Messages (Bot API 10.3, needs Kurigram >= 2.2.26) ──
     RICH_BUTTONS: bool = os.getenv("RICH_BUTTONS", "on").strip().lower() not in ("0", "off", "no", "false")
@@ -43,9 +43,9 @@ class Config:
     BUTTON_ICONS: dict = {}
 
     # ── Links ────────────────────────────────
-    SUPPORT_LINK:       str = os.getenv("SUPPORT_LINK", "https://t.me/")
-    UPDATE_LINK:        str = os.getenv("UPDATE_LINK", "https://t.me/")
-    SOURCE_LINK:        str = os.getenv("SOURCE_LINK", "https://github.com/")
+    SUPPORT_LINK:       str = os.getenv("SUPPORT_LINK", "https://t.me/alfabots_support")
+    UPDATE_LINK:        str = os.getenv("UPDATE_LINK", "https://t.me/Alfabots_update")
+    SOURCE_LINK:        str = os.getenv("SOURCE_LINK", "https://t.me/uffsexyboi")
     DOCS_URL:           str = os.getenv("DOCS_URL", "https://")
     OWNER_USERNAME:     str = os.getenv("OWNER_USERNAME", "")
     DEVELOPER_USERNAME: str = os.getenv("DEVELOPER_USERNAME", "")
