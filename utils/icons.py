@@ -44,7 +44,7 @@ ICONS = {
     # ── common ──
     "back": "5255831443816327915",
     "close": "5255831443816327915",
-    "confirm": "",       # ✅ Confirm & Promote
+    "confirm": "6267008582294705964",       # ✅ Confirm & Promote
 }
 
 # merge into config (env BUTTON_ICONS wins)
