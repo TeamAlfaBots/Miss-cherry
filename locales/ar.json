@@ -1,0 +1,187 @@
+{
+  "start": {
+    "welcome": "<b>👋 أهلاً بك {name}! 👋</b>\n\n<b>أنا Miss Cherry 🍒، بوت متقدم لإدارة مجموعات تيليجرام.</b>\n\n<b>اضغط /help لاستعراض ميزاتي وأوامري. ✨</b>",
+    "group_welcome": "مرحباً {name}! 👋\nأنا <b>Miss Cherry 🍒</b> مشرفة مجموعتك الذكية!\nاستخدم /help لعرض كل الميزات! ✨"
+  },
+  "general": {
+    "not_admin": "<blockquote><b>عذراً!</b></blockquote><b>أنت لست مشرفاً!</b>",
+    "not_sudo": "<blockquote><b>عذراً!</b></blockquote><b>مستخدمو sudo فقط يمكنهم استخدام هذا!</b>",
+    "not_owner": "<blockquote><b>عذراً!</b></blockquote><b>المالك فقط يمكنه استخدام هذا!</b>",
+    "no_user": "<blockquote><b>عذراً!</b></blockquote><b>حدد مستخدماً (بالرد / @username / user_id).</b>",
+    "user_not_found": "<blockquote><b>عذراً!</b></blockquote><b>لم يتم العثور على المستخدم.</b>",
+    "cant_action_admin": "<blockquote><b>عذراً!</b></blockquote><b>لا يمكن تنفيذ هذا الإجراء على مشرف!</b>",
+    "only_creator": "<blockquote><b>عذراً!</b></blockquote><b>منشئ المجموعة فقط يمكنه استخدام هذا!</b>",
+    "close": "✖️ تم الإغلاق.",
+    "enabled": "مفعّل",
+    "disabled": "معطّل"
+  },
+  "admin": {
+    "promoted": "<blockquote><b>تم بنجاح! 🎉</b></blockquote><b>تمت ترقية {name} إلى مشرف</b>!",
+    "demoted": "<blockquote><b>تم بنجاح! 🎉</b></blockquote><b>تم تنزيل {name} من الإشراف</b>!",
+    "cache_updated": "<blockquote><b>تم بنجاح! 🎉</b></blockquote><b>تم تحديث ذاكرة المشرفين! (تم العثور على {count} مشرف)</b>",
+    "adminlist_title": "👮 <b>مشرفو هذه الدردشة:</b>\n\n{list}",
+    "anon_updated": "⚙️ وضع المشرف المجهول: <b>{state}</b>",
+    "error_updated": "⚙️ رسائل الخطأ للمشرفين فقط: <b>{state}</b>"
+  },
+  "bans": {
+    "banned": "🔨 تم <b>حظر</b> {name}!",
+    "unbanned": "✅ تم <b>إلغاء حظر</b> {name}!",
+    "muted": "🔇 تم <b>كتم</b> {name}!",
+    "unmuted": "✅ تم <b>إلغاء كتم</b> {name}!",
+    "kicked": "👢 تم <b>طرد</b> {name}!",
+    "tban": "⏱ تم <b>حظر {name} مؤقتاً</b> لمدة <code>{time}</code>.",
+    "tmute": "⏱ تم <b>كتم {name} مؤقتاً</b> لمدة <code>{time}</code>.",
+    "reason": "\n<b>السبب:</b> {reason}",
+    "fail": "❌ فشل: {error}"
+  },
+  "antiflood": {
+    "disabled": "✅ تم <b>تعطيل</b> مكافح التكرار.",
+    "enabled": "✅ تم ضبط مكافح التكرار على <b>{limit}</b> رسالة.",
+    "status_off": "❌ مكافح التكرار <b>معطّل</b>.",
+    "status_on": "✅ مكافح التكرار <b>مفعّل</b>.\n• <b>الحد:</b> {limit} رسالة\n• <b>الإجراء:</b> {mode}\n• <b>حذف رسائل التكرار:</b> {clear}",
+    "mode_set": "✅ تم ضبط إجراء التكرار على <b>{mode}</b>.",
+    "timer_set": "✅ مكافح التكرار الزمني: <b>{count}</b> رسالة خلال <b>{duration}</b>.",
+    "timer_off": "✅ تم <b>تعطيل</b> مكافح التكرار الزمني.",
+    "clear_set": "✅ حذف رسائل التكرار: <b>{value}</b>.",
+    "triggered_ban": "🚫 تم <b>حظر</b> {name} بسبب التكرار!",
+    "triggered_mute": "🔇 تم <b>كتم</b> {name} بسبب التكرار!",
+    "triggered_kick": "👢 تم <b>طرد</b> {name} بسبب التكرار!",
+    "triggered_tban": "⏱ تم <b>حظر {name} مؤقتاً</b> بسبب التكرار!",
+    "triggered_tmute": "⏱ تم <b>كتم {name} مؤقتاً</b> بسبب التكرار!"
+  },
+  "antiraid": {
+    "enabled": "🛡 تم <b>تفعيل</b> مكافح الغارات لمدة <b>{duration}</b>!\nسيتم حظر كل المنضمين الجدد مؤقتاً.",
+    "disabled": "✅ تم <b>تعطيل</b> مكافح الغارات.",
+    "raidtime_set": "✅ تم ضبط مدة الغارة على <b>{time}</b>.",
+    "actiontime_set": "✅ تم ضبط مدة حظر المغيرين على <b>{time}</b>.",
+    "auto_set": "✅ مكافح الغارات التلقائي: يعمل إذا انضم <b>{joins}</b> مستخدمين خلال أقل من دقيقة.",
+    "auto_off": "✅ تم <b>تعطيل</b> مكافح الغارات التلقائي.",
+    "auto_triggered": "🚨 <b>تم اكتشاف غارة! تم تفعيل مكافح الغارات تلقائياً!</b>",
+    "current_raidtime": "⏱ مدة الغارة الحالية: <b>{time}</b>",
+    "current_actiontime": "⏱ مدة الحظر الحالية للمغيرين: <b>{time}</b>"
+  },
+  "approval": {
+    "approved_yes": "✅ {name} <b>موافَق عليه</b> في هذه الدردشة.",
+    "approved_no": "❌ {name} <b>غير موافَق عليه</b> في هذه الدردشة.",
+    "approve_done": "✅ تمت <b>الموافقة</b> على {name}!\nلن تنطبق عليه الأقفال وقائمة الحظر ومكافح التكرار.",
+    "unapprove_done": "✅ تم <b>سحب الموافقة</b> عن {name}. القيود تنطبق عليه مجدداً.",
+    "approved_list": "✅ <b>المستخدمون الموافَق عليهم:</b>\n\n{list}",
+    "approved_none": "📋 لا يوجد مستخدمون موافَق عليهم في هذه الدردشة.",
+    "unapprove_all_done": "✅ تم <b>سحب الموافقة</b> عن جميع المستخدمين."
+  },
+  "blocklist": {
+    "added": "✅ تمت إضافة <code>{trigger}</code> إلى قائمة الحظر.",
+    "removed": "✅ تمت إزالة <code>{trigger}</code> من قائمة الحظر.",
+    "cleared": "✅ تم <b>مسح</b> جميع كلمات قائمة الحظر!",
+    "list_title": "🚫 <b>كلمات قائمة الحظر:</b>\n\n{list}",
+    "list_empty": "📋 لا توجد كلمات في قائمة الحظر لهذه الدردشة.",
+    "mode_set": "✅ تم ضبط وضع قائمة الحظر على <b>{mode}</b>.",
+    "delete_set": "✅ حذف قائمة الحظر: <b>{value}</b>.",
+    "reason_set": "✅ تم ضبط السبب الافتراضي لقائمة الحظر: <code>{reason}</code>",
+    "reason_reset": "✅ تمت <b>إعادة ضبط</b> السبب الافتراضي لقائمة الحظر."
+  },
+  "filters": {
+    "added": "✅ تمت إضافة الفلتر <code>{trigger}</code>!",
+    "removed": "✅ تمت إزالة الفلتر <code>{trigger}</code>.",
+    "cleared": "✅ تم <b>مسح</b> جميع الفلاتر!",
+    "list_title": "🔍 <b>الفلاتر النشطة:</b>\n\n{list}",
+    "list_empty": "📋 لا توجد فلاتر في هذه الدردشة."
+  },
+  "greetings": {
+    "welcome_on": "✅ رسائل الترحيب: <b>مفعّلة</b>.",
+    "welcome_off": "✅ رسائل الترحيب: <b>معطّلة</b>.",
+    "goodbye_on": "✅ رسائل الوداع: <b>مفعّلة</b>.",
+    "goodbye_off": "✅ رسائل الوداع: <b>معطّلة</b>.",
+    "welcome_set": "✅ تم تحديث رسالة الترحيب!",
+    "welcome_reset": "✅ تمت إعادة رسالة الترحيب إلى الافتراضي.",
+    "goodbye_set": "✅ تم تحديث رسالة الوداع!",
+    "goodbye_reset": "✅ تمت إعادة رسالة الوداع إلى الافتراضي.",
+    "clean_on": "✅ حذف الترحيب تلقائياً: <b>مفعّل</b>.",
+    "clean_off": "✅ حذف الترحيب تلقائياً: <b>معطّل</b>.",
+    "default_welcome": "👋 أهلاً {mention} في <b>{chatname}</b>!",
+    "default_goodbye": "👋 غادر {mention} <b>{chatname}</b>. وداعاً!"
+  },
+  "language": {
+    "current": "🌐 اللغة الحالية: <b>{lang}</b>\n\nاختر لغة:",
+    "set": "✅ تم ضبط اللغة على <b>{lang}</b>!",
+    "invalid": "❌ لغة غير صالحة. اختر من الأزرار."
+  },
+  "pin": {
+    "pinned": "📌 تم <b>تثبيت</b> الرسالة!",
+    "unpinned": "✅ تم <b>إلغاء تثبيت</b> الرسالة!",
+    "unpinned_all": "✅ تم <b>إلغاء تثبيت</b> جميع الرسائل!",
+    "no_pinned": "📌 لا توجد رسالة مثبتة في هذه الدردشة.",
+    "antichannelpin_on": "✅ منع تثبيت رسائل القناة: <b>مفعّل</b>.",
+    "antichannelpin_off": "✅ منع تثبيت رسائل القناة: <b>معطّل</b>.",
+    "cleanlinked_on": "✅ تنظيف رسائل القناة المرتبطة: <b>مفعّل</b>.",
+    "cleanlinked_off": "✅ تنظيف رسائل القناة المرتبطة: <b>معطّل</b>.",
+    "no_reply": "❌ قم بالرد على رسالة لتثبيتها."
+  },
+  "purge": {
+    "done": "✅ تم حذف <b>{count}</b> رسالة.",
+    "no_reply": "❌ قم بالرد على رسالة لبدء الحذف منها.",
+    "purgefrom_set": "✅ تم تحديد بداية الحذف! الآن استخدم <code>/purgeto</code> للإنهاء.",
+    "purgeto_no_from": "❌ استخدم <code>/purgefrom</code> أولاً لتحديد رسالة البداية.",
+    "fail": "❌ فشل: {error}"
+  },
+  "report": {
+    "not_reply": "❌ قم بالرد على رسالة للإبلاغ عنها.",
+    "cant_report_admin": "❌ لا يمكن الإبلاغ عن مشرف.",
+    "reported": "🚨 <b>تم إبلاغ المشرفين بالرسالة!</b>\n\n<b>المبلِّغ:</b> {user}\n<b>المشرفون المُنبَّهون:</b> {admins}",
+    "disabled": "ℹ️ البلاغات معطّلة في هذه الدردشة.",
+    "admin_cant_report": "ℹ️ لا يمكن للمشرفين استخدام أمر الإبلاغ.",
+    "reports_on": "✅ بلاغات المستخدمين: <b>مفعّلة</b>.",
+    "reports_off": "✅ بلاغات المستخدمين: <b>معطّلة</b>."
+  },
+  "rules": {
+    "none": "📜 لم يتم تعيين قواعد لهذه الدردشة بعد.",
+    "title": "📜 <b>قواعد {chatname}:</b>\n\n{rules}",
+    "set": "✅ تم تحديث القواعد!",
+    "reset": "✅ تمت <b>إعادة ضبط</b> القواعد.",
+    "private_on": "✅ القواعد في الخاص: <b>مفعّلة</b>.",
+    "private_off": "✅ القواعد في الخاص: <b>معطّلة</b>.",
+    "sent_private": "📩 تم إرسال القواعد إليك في الخاص!"
+  },
+  "warning": {
+    "warned": "⚠️ تم <b>تحذير</b> {name}! ({count}/{limit})\n<b>السبب:</b> {reason}",
+    "limit_reached": "🚨 تم بلوغ حد التحذيرات! الإجراء: <b>{action}</b>",
+    "no_warns": "✅ لا توجد تحذيرات على {name}.",
+    "warns_list": "⚠️ <b>تحذيرات {name}</b> ({count}/{limit}):\n\n{list}",
+    "removed": "✅ تمت إزالة آخر تحذير عن {name}.",
+    "reset": "✅ تمت <b>إعادة ضبط</b> تحذيرات {name}.",
+    "reset_all": "✅ تم <b>مسح</b> جميع التحذيرات في هذه الدردشة!",
+    "settings": "⚙️ <b>إعدادات التحذيرات:</b>\n\n• <b>الحد:</b> {limit}\n• <b>الإجراء:</b> {mode}\n• <b>الانتهاء:</b> {time}",
+    "mode_set": "✅ تم ضبط وضع التحذير على <b>{mode}</b>.",
+    "limit_set": "✅ تم ضبط حد التحذيرات على <b>{limit}</b>.",
+    "time_set": "✅ ستنتهي التحذيرات بعد <b>{time}</b>.",
+    "time_off": "✅ التحذيرات <b>لن تنتهي أبداً</b>.",
+    "cant_warn_admin": "❌ لا يمكن تحذير مشرف!"
+  },
+  "sudo": {
+    "added": "✅ تمت إضافة {name} كـ <b>مستخدم sudo</b>!",
+    "removed": "✅ تمت إزالة {name} من مستخدمي sudo.",
+    "already_owner": "ℹ️ هذا المستخدم مالك بالفعل!",
+    "list_title": "🔑 <b>مستخدمو sudo:</b>\n\n{list}",
+    "list_empty": "📋 لم تتم إضافة مستخدمي sudo بعد."
+  },
+  "getlink": {
+    "no_chats": "📋 لا توجد دردشات في قاعدة البيانات.",
+    "no_permission": "لا توجد صلاحية",
+    "fail": "❌ تعذّر جلب روابط الدردشات."
+  },
+  "chatbot": {
+    "on": "🤖 تم <b>تشغيل ✅</b> الدردشة الآلية!",
+    "off": "🤖 تم <b>إيقاف ❌</b> الدردشة الآلية!",
+    "status_on": "🤖 الدردشة الآلية حالياً: <b>تعمل ✅</b>",
+    "status_off": "🤖 الدردشة الآلية حالياً: <b>متوقفة ❌</b>",
+    "error": "أوه، حدث خطأ ما 😅"
+  },
+  "broadcast": {
+    "no_reply": "❌ يرجى <b>الرد</b> على الرسالة التي تريد بثّها.",
+    "started": "📡 جارٍ البث... يرجى الانتظار.",
+    "done": "✅ <b>اكتمل البث!</b>\n\n• <b>الإجمالي:</b> {total}\n• <b>نجح:</b> {success} ✅\n• <b>فشل:</b> {failed} ❌"
+  },
+  "info": {
+    "title": "ℹ️ <b>معلومات Miss Cherry</b>\n\nصُنع بـ ❤️ بواسطة <b>AlfaBots</b>"
+  }
+}

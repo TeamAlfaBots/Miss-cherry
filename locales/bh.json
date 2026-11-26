@@ -1,0 +1,187 @@
+{
+  "start": {
+    "welcome": "<b>👋 Swagat ba {name}! 👋</b>\n\n<b>Ham Miss Cherry 🍒 hayi, ek advanced Telegram group management bot.</b>\n\n<b>Hamaar features aur commands dekhe ke /help dabaaw. ✨</b>",
+    "group_welcome": "Hey {name}! 👋\nHam <b>Miss Cherry 🍒</b> hayi, raur smart group moderator bot!\nSab features dekhe ke /help use karaw! ✨"
+  },
+  "general": {
+    "not_admin": "<blockquote><b>Oops!</b></blockquote><b>Raur admin naikhe!</b>",
+    "not_sudo": "<blockquote><b>Oops!</b></blockquote><b>Sirf sudo users ei use kar sake la!</b>",
+    "not_owner": "<blockquote><b>Oops!</b></blockquote><b>Sirf owner ei use kar sake la!</b>",
+    "no_user": "<blockquote><b>Oops!</b></blockquote><b>Kono user batawa (reply / @username / user_id).</b>",
+    "user_not_found": "<blockquote><b>Oops!</b></blockquote><b>User nahi milal.</b>",
+    "cant_action_admin": "<blockquote><b>Oops!</b></blockquote><b>Admin par ei action nahi ho sake la!</b>",
+    "only_creator": "<blockquote><b>Oops!</b></blockquote><b>Sirf group creator ei use kar sake la!</b>",
+    "close": "✖️ Band kar diyal gail.",
+    "enabled": "chalu",
+    "disabled": "band"
+  },
+  "admin": {
+    "promoted": "<blockquote><b>Safal! 🎉</b></blockquote><b>{name} ke admin bana diyal gail</b>!",
+    "demoted": "<blockquote><b>Safal! 🎉</b></blockquote><b>{name} ke admin se hata diyal gail</b>!",
+    "cache_updated": "<blockquote><b>Safal! 🎉</b></blockquote><b>Admin cache refresh ho gail! ({count} admin milal)</b>",
+    "adminlist_title": "👮 <b>Ei chat ke admins:</b>\n\n{list}",
+    "anon_updated": "⚙️ Anonymous admin mode: <b>{state}</b>",
+    "error_updated": "⚙️ Admin-only error message: <b>{state}</b>"
+  },
+  "bans": {
+    "banned": "🔨 {name} ke <b>ban</b> kar diyal gail!",
+    "unbanned": "✅ {name} ke <b>unban</b> kar diyal gail!",
+    "muted": "🔇 {name} ke <b>mute</b> kar diyal gail!",
+    "unmuted": "✅ {name} ke <b>unmute</b> kar diyal gail!",
+    "kicked": "👢 {name} ke <b>kick</b> kar diyal gail!",
+    "tban": "⏱ {name} ke <code>{time}</code> khatir <b>temp-ban</b> kar diyal gail.",
+    "tmute": "⏱ {name} ke <code>{time}</code> khatir <b>temp-mute</b> kar diyal gail.",
+    "reason": "\n<b>Kaaran:</b> {reason}",
+    "fail": "❌ Fail ho gail: {error}"
+  },
+  "antiflood": {
+    "disabled": "✅ Antiflood <b>band</b> kar diyal gail.",
+    "enabled": "✅ Antiflood <b>{limit}</b> messages par set ho gail.",
+    "status_off": "❌ Antiflood <b>band</b> ba.",
+    "status_on": "✅ Antiflood <b>chalu</b> ba.\n• <b>Limit:</b> {limit} messages\n• <b>Action:</b> {mode}\n• <b>Flood msgs delete:</b> {clear}",
+    "mode_set": "✅ Flood action <b>{mode}</b> set ho gail.",
+    "timer_set": "✅ Timed antiflood: <b>{duration}</b> mein <b>{count}</b> messages.",
+    "timer_off": "✅ Timed antiflood <b>band</b> kar diyal gail.",
+    "clear_set": "✅ Flood messages delete: <b>{value}</b>.",
+    "triggered_ban": "🚫 {name} ke flood kare khatir <b>ban</b> kar diyal gail!",
+    "triggered_mute": "🔇 {name} ke flood kare khatir <b>mute</b> kar diyal gail!",
+    "triggered_kick": "👢 {name} ke flood kare khatir <b>kick</b> kar diyal gail!",
+    "triggered_tban": "⏱ {name} ke flood kare khatir <b>temp-ban</b> kar diyal gail!",
+    "triggered_tmute": "⏱ {name} ke flood kare khatir <b>temp-mute</b> kar diyal gail!"
+  },
+  "antiraid": {
+    "enabled": "🛡 Antiraid <b>{duration}</b> khatir <b>chalu</b> ho gail!\nSab naya join karne wala temp-ban hoi.",
+    "disabled": "✅ Antiraid <b>band</b> kar diyal gail.",
+    "raidtime_set": "✅ Raid duration <b>{time}</b> set ho gail.",
+    "actiontime_set": "✅ Raider ban duration <b>{time}</b> set ho gail.",
+    "auto_set": "✅ Auto antiraid: 1 minute se kam mein <b>{joins}</b> users join karihen to chalu hoi.",
+    "auto_off": "✅ Auto antiraid <b>band</b> kar diyal gail.",
+    "auto_triggered": "🚨 <b>Raid pakadal gail! Antiraid apne-aap chalu ho gail!</b>",
+    "current_raidtime": "⏱ Abhi ke raid duration: <b>{time}</b>",
+    "current_actiontime": "⏱ Raiders khatir abhi ke ban duration: <b>{time}</b>"
+  },
+  "approval": {
+    "approved_yes": "✅ {name} ei chat mein <b>approved</b> ba.",
+    "approved_no": "❌ {name} ei chat mein <b>approved nahi</b> ba.",
+    "approve_done": "✅ {name} ke <b>approve</b> kar diyal gail!\nLocks, blocklists aur antiflood lagu nahi hoi.",
+    "unapprove_done": "✅ {name} ke <b>unapprove</b> kar diyal gail. Pabandi phir se lagu hoi.",
+    "approved_list": "✅ <b>Approved users:</b>\n\n{list}",
+    "approved_none": "📋 Ei chat mein koi approved user nahi ba.",
+    "unapprove_all_done": "✅ Sab approved users <b>unapprove</b> kar diyal gail."
+  },
+  "blocklist": {
+    "added": "✅ <code>{trigger}</code> blocklist mein jod diyal gail.",
+    "removed": "✅ <code>{trigger}</code> blocklist se hata diyal gail.",
+    "cleared": "✅ Sab blocklist triggers <b>saaf</b> kar diyal gail!",
+    "list_title": "🚫 <b>Blocklist triggers:</b>\n\n{list}",
+    "list_empty": "📋 Ei chat mein koi blocklist trigger nahi ba.",
+    "mode_set": "✅ Blocklist mode <b>{mode}</b> set ho gail.",
+    "delete_set": "✅ Blocklist delete: <b>{value}</b>.",
+    "reason_set": "✅ Default blocklist kaaran set ho gail: <code>{reason}</code>",
+    "reason_reset": "✅ Default blocklist kaaran <b>reset</b> ho gail."
+  },
+  "filters": {
+    "added": "✅ Filter <code>{trigger}</code> jod diyal gail!",
+    "removed": "✅ Filter <code>{trigger}</code> hata diyal gail.",
+    "cleared": "✅ Sab filters <b>saaf</b> kar diyal gail!",
+    "list_title": "🔍 <b>Chalu filters:</b>\n\n{list}",
+    "list_empty": "📋 Ei chat mein koi filter nahi ba."
+  },
+  "greetings": {
+    "welcome_on": "✅ Welcome messages: <b>chalu</b>.",
+    "welcome_off": "✅ Welcome messages: <b>band</b>.",
+    "goodbye_on": "✅ Goodbye messages: <b>chalu</b>.",
+    "goodbye_off": "✅ Goodbye messages: <b>band</b>.",
+    "welcome_set": "✅ Welcome message update ho gail!",
+    "welcome_reset": "✅ Welcome message default par laut gail.",
+    "goodbye_set": "✅ Goodbye message update ho gail!",
+    "goodbye_reset": "✅ Goodbye message default par laut gail.",
+    "clean_on": "✅ Clean welcome: <b>chalu</b>.",
+    "clean_off": "✅ Clean welcome: <b>band</b>.",
+    "default_welcome": "👋 {mention}, <b>{chatname}</b> mein swagat ba!",
+    "default_goodbye": "👋 {mention} <b>{chatname}</b> chhod gail. Alvida!"
+  },
+  "language": {
+    "current": "🌐 Abhi ke bhasha: <b>{lang}</b>\n\nEk bhasha chuna:",
+    "set": "✅ Bhasha <b>{lang}</b> set ho gail!",
+    "invalid": "❌ Galat bhasha. Kripya buttons se chuna."
+  },
+  "pin": {
+    "pinned": "📌 Message <b>pin</b> ho gail!",
+    "unpinned": "✅ Message <b>unpin</b> ho gail!",
+    "unpinned_all": "✅ Sab messages <b>unpin</b> ho gail!",
+    "no_pinned": "📌 Ei chat mein koi pinned message nahi ba.",
+    "antichannelpin_on": "✅ Anti-channel-pin: <b>chalu</b>.",
+    "antichannelpin_off": "✅ Anti-channel-pin: <b>band</b>.",
+    "cleanlinked_on": "✅ Linked channel messages saaf karna: <b>chalu</b>.",
+    "cleanlinked_off": "✅ Linked channel messages saaf karna: <b>band</b>.",
+    "no_reply": "❌ Pin karey khatir kisi message ke reply karaw."
+  },
+  "purge": {
+    "done": "✅ <b>{count}</b> messages purge ho gail.",
+    "no_reply": "❌ Purge shuru karey khatir kisi message ke reply karaw.",
+    "purgefrom_set": "✅ Purge ke shuruaat mark ho gail! Ab khatam karey khatir <code>/purgeto</code> use karaw.",
+    "purgeto_no_from": "❌ Pehle <code>/purgefrom</code> se shuruaati message mark karaw.",
+    "fail": "❌ Fail ho gail: {error}"
+  },
+  "report": {
+    "not_reply": "❌ Report karey khatir kisi message ke reply karaw.",
+    "cant_report_admin": "❌ Admin ke report nahi kar sake la.",
+    "reported": "🚨 <b>Message admins ke report ho gail!</b>\n\n<b>Report kailas:</b> {user}\n<b>Admins ke suchit kailas:</b> {admins}",
+    "disabled": "ℹ️ Ei chat mein reports band ba.",
+    "admin_cant_report": "ℹ️ Admins report command use nahi kar sake.",
+    "reports_on": "✅ User reports: <b>chalu</b>.",
+    "reports_off": "✅ User reports: <b>band</b>."
+  },
+  "rules": {
+    "none": "📜 Ei chat khatir abhi koi rules set nahi ba.",
+    "title": "📜 <b>{chatname} ke rules:</b>\n\n{rules}",
+    "set": "✅ Rules update ho gail!",
+    "reset": "✅ Rules <b>reset</b> ho gail.",
+    "private_on": "✅ Private rules: <b>chalu</b>.",
+    "private_off": "✅ Private rules: <b>band</b>.",
+    "sent_private": "📩 Rules raur private mein bhej diyal gail!"
+  },
+  "warning": {
+    "warned": "⚠️ {name} ke <b>warn</b> kar diyal gail! ({count}/{limit})\n<b>Kaaran:</b> {reason}",
+    "limit_reached": "🚨 Warn limit puri ho gail! Action: <b>{action}</b>",
+    "no_warns": "✅ {name} ke koi warning nahi ba.",
+    "warns_list": "⚠️ <b>{name} ke warnings</b> ({count}/{limit}):\n\n{list}",
+    "removed": "✅ {name} ke aakhri warning hata diyal gail.",
+    "reset": "✅ {name} ke warnings <b>reset</b> kar diyal gail.",
+    "reset_all": "✅ Ei chat ke sab warnings <b>saaf</b> kar diyal gail!",
+    "settings": "⚙️ <b>Warning settings:</b>\n\n• <b>Limit:</b> {limit}\n• <b>Action:</b> {mode}\n• <b>Expiry:</b> {time}",
+    "mode_set": "✅ Warn mode <b>{mode}</b> set ho gail.",
+    "limit_set": "✅ Warn limit <b>{limit}</b> set ho gail.",
+    "time_set": "✅ Warnings <b>{time}</b> ke baad expire hoihen.",
+    "time_off": "✅ Warnings <b>kabhi expire nahi</b> hoihen.",
+    "cant_warn_admin": "❌ Admin ke warn nahi kar sake la!"
+  },
+  "sudo": {
+    "added": "✅ {name} ke <b>sudo user</b> bana diyal gail!",
+    "removed": "✅ {name} ke sudo users se hata diyal gail.",
+    "already_owner": "ℹ️ Ei user pehle se owner ba!",
+    "list_title": "🔑 <b>Sudo users:</b>\n\n{list}",
+    "list_empty": "📋 Abhi koi sudo user nahi jodal gail."
+  },
+  "getlink": {
+    "no_chats": "📋 Database mein koi chat nahi milal.",
+    "no_permission": "Permission nahi ba",
+    "fail": "❌ Koi chat link nahi mil sakal."
+  },
+  "chatbot": {
+    "on": "🤖 Chatbot <b>ON ✅</b> kar diyal gail!",
+    "off": "🤖 Chatbot <b>OFF ❌</b> kar diyal gail!",
+    "status_on": "🤖 Chatbot abhi: <b>ON ✅</b>",
+    "status_off": "🤖 Chatbot abhi: <b>OFF ❌</b>",
+    "error": "Arrey bhai, kuch gadbad ho gail 😅"
+  },
+  "broadcast": {
+    "no_reply": "❌ Jon message broadcast karey chahat baani, uhe ke <b>reply</b> karaw.",
+    "started": "📡 Broadcast ho rahal ba... Kripya ruka.",
+    "done": "✅ <b>Broadcast puri ho gail!</b>\n\n• <b>Kul:</b> {total}\n• <b>Safal:</b> {success} ✅\n• <b>Fail:</b> {failed} ❌"
+  },
+  "info": {
+    "title": "ℹ️ <b>Miss Cherry Info</b>\n\nBanawal gail ❤️ se <b>AlfaBots</b> dwara"
+  }
+}
