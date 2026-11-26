@@ -12,11 +12,11 @@
 
 ICONS = {
     # ── /start menu ──
-    "support": "",
-    "updates": "",
-    "help": "",          # ❓ Help & Commands
-    "language": "",      # 🌐 Language
-    "info": "",          # 🪧 Info
+    "support": "4956475826762679249",
+    "updates": "4956290155326473271",
+    "help": "4958534696645428119",          # ❓ Help & Commands
+    "language": "4956560549287560231",      # 🌐 Language
+    "info": "4956324463525233747",          # 🪧 Info
     # ── info menu ──
     "owner": "",
     "developer": "",
