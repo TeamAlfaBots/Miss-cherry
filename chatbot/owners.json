@@ -1,6 +1,6 @@
 {
-  "_help": "reply_to_all=true: owners ke har message ka bot reply karega (chatbot ON/OFF se matlab nahi, groups aur DM dono me). false: sirf tab jab owner bot ko address kare (mention / reply / seedha message).",
-  "reply_to_all": true,
+  "_help": "reply_to_all=false (default): groups me owner ko tabhi reply jab wo bot ko @mention kare ya bot ke message ko reply kare. true: owner ke har message ka reply. DM me hamesha reply.",
+  "reply_to_all": false,
   "owners": [
     {
       "id": 7185778863,
