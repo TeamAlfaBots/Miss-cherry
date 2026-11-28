@@ -41,7 +41,7 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "chatbot"
 # ⚠️ Is file me secret key hai — public GitHub repo me mat daalna (key leak ho jati hai).
 DEEPSEEK_API_KEY = "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"
 DEEPSEEK_BASE_URL = "https://api.groq.com/openai/v1"
-DEEPSEEK_MODEL = "minimaxai/minimax-m2.7"
+DEEPSEEK_MODEL = "openai/gpt-oss-120b"
 
 
 def _key_ready() -> bool:
