@@ -118,12 +118,12 @@ HELP_TEXTS = {
 Make it easy to promote and demote users!
 
 <b>Commands:</b>
-- <code>/promote</code> — Promote a user
+<blockquote expandable>- <code>/promote</code> — Promote a user
 - <code>/demote</code> — Demote a user
 - <code>/adminlist</code> — List all admins
 - <code>/admincache</code> — Refresh admin cache
 - <code>/anonadmin</code> &lt;yes/no&gt; — Allow anon admins
-- <code>/adminerror</code> &lt;yes/no&gt; — Show error to normal users""",
+- <code>/adminerror</code> &lt;yes/no&gt; — Show error to normal users</blockquote>""",
 
     "antiflood": """🌊 <b>Antiflood</b>
 
