@@ -27,7 +27,6 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 
 from core.compat import enum_name
-from core.config import cfg
 from core.database import (
     set_chatbot, get_chatbot,
     get_chat_history, save_chat_history,
@@ -37,6 +36,18 @@ from core.logger import logger
 from core.translator import _
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "chatbot"
+
+# ── DeepSeek settings (hardcoded) ──────────────────────────────
+# ⚠️ Is file me secret key hai — public GitHub repo me mat daalna (key leak ho jati hai).
+DEEPSEEK_API_KEY = "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"
+DEEPSEEK_BASE_URL = "https://api.groq.com/openai/v1"
+DEEPSEEK_MODEL = "minimaxai/minimax-m2.7"
+
+
+def _key_ready() -> bool:
+    k = (DEEPSEEK_API_KEY or "").strip()
+    return bool(k) and "PASTE_YOUR" not in k
+
 USER_COOLDOWN = 3          # seconds between replies to the same normal user
 HISTORY_SENT = 12          # last N messages sent to the model
 EXAMPLES_K = 3             # dataset examples per request
@@ -256,17 +267,17 @@ async def _call_deepseek(system: str, history: list) -> str:
     if _session is None or _session.closed:
         _session = aiohttp.ClientSession()
     payload = {
-        "model": cfg.DEEPSEEK_MODEL,
+        "model": DEEPSEEK_MODEL,
         "messages": [{"role": "system", "content": system}] + history[-HISTORY_SENT:],
         "max_tokens": 200,
         "temperature": 0.8,
     }
     headers = {
-        "Authorization": f"Bearer {cfg.DEEPSEEK_API_KEY}",
+        "Authorization": f"Bearer {DEEPSEEK_API_KEY.strip()}",
         "Content-Type": "application/json",
     }
     async with _session.post(
-        "https://api.deepseek.com/v1/chat/completions",
+        f"{DEEPSEEK_BASE_URL.rstrip('/')}/chat/completions",
         json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=30),
     ) as resp:
         status = resp.status
@@ -303,8 +314,8 @@ async def generate_reply(history: list, text: str, first_name: str, owner: dict 
 
     # 2. DeepSeek with persona (+ dataset style examples for normal users)
     reply, reason = "", ""
-    if not cfg.DEEPSEEK_API_KEY:
-        reason = "DEEPSEEK_API_KEY set nahi hai (Render > Environment me daalo)"
+    if not _key_ready():
+        reason = "DEEPSEEK_API_KEY set nahi hai (modules/chatbot.py me upar daalo)"
         logger.warning(f"chatbot: {reason}")
     else:
         try:
@@ -411,4 +422,4 @@ async def chatbot_handler(client: Client, message: Message):
         await message.reply(reply, parse_mode=enums.ParseMode.DISABLED)
     except Exception:
         pass
-    
+        
