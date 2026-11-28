@@ -50,10 +50,10 @@ def _load_owners():
     try:
         data = json.loads((DATA_DIR / "owners.json").read_text(encoding="utf-8"))
         owners = {int(o["id"]): o for o in data.get("owners", [])}
-        return owners, bool(data.get("reply_to_all", True))
+        return owners, bool(data.get("reply_to_all", False))
     except Exception as e:
         logger.warning(f"chatbot: owners.json not loaded ({e!r})")
-        return {}, True
+        return {}, False
 
 
 OWNERS, REPLY_TO_ALL = _load_owners()
@@ -85,9 +85,12 @@ def _owner_prompt(owner: dict, first_name: str) -> str:
     return text
 
 
-def _owner_fallback(owner: dict) -> str:
+def _owner_fallback(owner: dict, reason: str = "") -> str:
     call = (owner.get("call") or ["Sir"])[0]
-    return f"Ji {call}, abhi thodi technical dikkat aa gayi hai 🙏 thodi der baad phir try kijiye."
+    text = f"Ji {call}, abhi thodi technical dikkat aa gayi hai 🙏 thodi der baad phir try kijiye."
+    if reason and owner.get("role") == "main_owner":      # debug info only for the main owner
+        text += f"\n\n🛠 {reason}"
+    return text
 
 
 # ══════════════════════════════════════════════
@@ -266,8 +269,17 @@ async def _call_deepseek(system: str, history: list) -> str:
         "https://api.deepseek.com/v1/chat/completions",
         json=payload, headers=headers, timeout=aiohttp.ClientTimeout(total=30),
     ) as resp:
-        data = await resp.json()
-    return data["choices"][0]["message"]["content"]
+        status = resp.status
+        body = await resp.text()
+    if status != 200:
+        raise RuntimeError(f"HTTP {status}: {body[:150]}")
+    try:
+        text = json.loads(body)["choices"][0]["message"]["content"]
+    except Exception:
+        raise RuntimeError(f"Bad response: {body[:150]}")
+    if not (text or "").strip():
+        raise RuntimeError("Empty reply from DeepSeek")
+    return text
 
 
 def _clean(reply: str) -> str:
@@ -290,18 +302,22 @@ async def generate_reply(history: list, text: str, first_name: str, owner: dict 
     history = history + [{"role": "user", "content": msg}]
 
     # 2. DeepSeek with persona (+ dataset style examples for normal users)
-    reply = ""
-    if cfg.DEEPSEEK_API_KEY:
+    reply, reason = "", ""
+    if not cfg.DEEPSEEK_API_KEY:
+        reason = "DEEPSEEK_API_KEY set nahi hai (Render > Environment me daalo)"
+        logger.warning(f"chatbot: {reason}")
+    else:
         try:
             examples = [] if owner else DATA.examples(text)
             reply = _clean(await _call_deepseek(build_system(examples, owner, first_name), history))
         except Exception as e:
-            logger.warning(f"chatbot: DeepSeek failed: {e!r}")
+            reason = str(e)[:160] or repr(e)
+            logger.warning(f"chatbot: DeepSeek failed: {reason}")
 
     # 3. fallback
     if not reply:
         if owner:
-            reply = _owner_fallback(owner)
+            reply = _owner_fallback(owner, reason)
         else:
             best = DATA.examples(text, 1)
             reply = best[0][1] if best else "Abhi thoda issue aa gaya yaar 😅 thodi der baad try karo."
@@ -344,6 +360,16 @@ def _addressed(client_me, message: Message) -> bool:
     return is_direct or is_reply_bot or is_mentioned
 
 
+def _mentioned_or_replied(client_me, message: Message) -> bool:
+    """Strict check used for owners in groups: the bot must be @mentioned,
+    or the message must be a reply to one of the bot's own messages."""
+    rep = message.reply_to_message
+    if rep and rep.from_user and rep.from_user.id == client_me.id:
+        return True
+    return bool(client_me.username and
+                f"@{client_me.username}".lower() in (message.text or "").lower())
+
+
 @Client.on_message(filters.text & ~filters.service & ~filters.regex(r"^/"), group=13)
 async def chatbot_handler(client: Client, message: Message):
     user = message.from_user
@@ -358,8 +384,9 @@ async def chatbot_handler(client: Client, message: Message):
     else:
         me = client.me or await client.get_me()
         if owner:
-            # owners are answered even when the chatbot is OFF in this group
-            if not REPLY_TO_ALL and not _addressed(me, message):
+            # owners are answered even when the chatbot is OFF in this group,
+            # but (default) only on @mention or reply-to-bot — not every message
+            if not REPLY_TO_ALL and not _mentioned_or_replied(me, message):
                 return
         else:
             if not await get_chatbot(message.chat.id):
@@ -370,7 +397,8 @@ async def chatbot_handler(client: Client, message: Message):
     if not owner:                          # light anti-spam for normal users
         key = (message.chat.id, user.id)
         now = time.monotonic()
-        if now - _last_reply.get(key, 0) < USER_COOLDOWN:
+        last = _last_reply.get(key)
+        if last is not None and now - last < USER_COOLDOWN:
             return
         _last_reply[key] = now
         if len(_last_reply) > 20000:
@@ -383,3 +411,4 @@ async def chatbot_handler(client: Client, message: Message):
         await message.reply(reply, parse_mode=enums.ParseMode.DISABLED)
     except Exception:
         pass
+    
