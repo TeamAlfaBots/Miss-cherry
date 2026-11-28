@@ -1,0 +1,27 @@
+{
+  "_help": "reply_to_all=true: owners ke har message ka bot reply karega (chatbot ON/OFF se matlab nahi, groups aur DM dono me). false: sirf tab jab owner bot ko address kare (mention / reply / seedha message).",
+  "reply_to_all": true,
+  "owners": [
+    {
+      "id": 7185778863,
+      "role": "main_owner",
+      "gender": "male",
+      "call": ["Sir", "Boss"],
+      "extra": ""
+    },
+    {
+      "id": 8556154047,
+      "role": "owner",
+      "gender": "female",
+      "call": ["Mam"],
+      "extra": ""
+    },
+    {
+      "id": 8661302468,
+      "role": "owner",
+      "gender": "male",
+      "call": ["Sir"],
+      "extra": ""
+    }
+  ]
+}
