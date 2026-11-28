@@ -14,9 +14,9 @@ def mention(user) -> str:
 async def get_target_user(client, message: Message):
     """
     Returns (user, reason) from reply / mention / user_id.
-    Raises ValueError with a clear message if the replied-to account
-    has been deleted (Telegram discards its identity, so it can
-    never be resolved — this is a hard limitation, not a bug).
+    If the replied-to account has been deleted (Telegram discards its
+    identity, so it can never be resolved) it replies with a clear
+    message and stops the command quietly.
     """
     reason = ""
 
@@ -29,7 +29,13 @@ async def get_target_user(client, message: Message):
         elif message.reply_to_message.sender_chat is None:
             # No from_user AND no sender_chat on a real message almost
             # always means the account has been deleted.
-            raise ValueError("deleted_account")
+            # Used to raise ValueError -> uncaught crash in /approve, /warn,
+            # /promote ... Now every command answers politely and stops here.
+            await message.reply(
+                "❌ Ye message kisi <b>deleted account</b> ka hai, Telegram ab uski "
+                "pehchaan nahi deta. Command ko user ki <b>ID</b> ya <b>@username</b> ke saath chalao."
+            )
+            message.stop_propagation()      # silent stop, no error in logs
 
     args = message.text.split(None, 2)
     if len(args) < 2:
@@ -58,3 +64,4 @@ async def get_target_user(client, message: Message):
         return user, reason
     except Exception:
         return None, reason
+        
